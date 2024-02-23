@@ -1,0 +1,117 @@
+/* Animation pour le loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    opacity: 1;
+
+    &.loaded {
+        display: none;
+    }
+
+    &.loaded .content {
+        filter: blur(0);
+    }
+
+    &:not(.loaded) {
+        animation: removeLoader 2s forwards;
+    }
+
+    .content {
+        filter: blur(5px);
+    }
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0 5px;
+        animation: bounce 0.5s infinite alternate;
+
+        &:nth-child(1) {
+            background: linear-gradient(135deg, $purple, #bb56dc);
+        }
+
+        &:nth-child(2) {
+            background: linear-gradient(135deg, #bb56dc, #cc56dc);
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            background: linear-gradient(135deg, #cc56dc, $pink);
+            animation-delay: 0.4s;
+        }
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+}
+
+@keyframes removeLoader {
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+
+    }
+}
+
+/* Animation pour les menus */
+$animation-delay: 0.25s;
+
+@keyframes appearAnimation {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@for $i from 1 through 3 {
+    $category: entrees;
+    $delay: $animation-delay * ($i - 1);
+
+    @if $i == 2 {
+        $category: plats;
+    } @else if $i == 3 {
+        $category: desserts;
+    }
+
+    .#{$category} .menu_container__items__card {
+        animation: appearAnimation 0.5s ease forwards;
+        
+        @for $j from 1 through 4 {
+            $element-delay: $delay + $animation-delay * ($j - 1);
+
+            @if $category == plats {
+                $element-delay: $element-delay + $animation-delay * 3;
+            } @else if $category == desserts {
+                $element-delay: $element-delay + $animation-delay * 6;
+            }
+
+            &:nth-child(#{$j}) {
+                animation-delay: $element-delay;
+            }
+        }
+    }
+}
