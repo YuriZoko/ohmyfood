@@ -587,6 +587,12 @@ footer p, footer a {
   opacity: 0;
   transform: translateY(20px);
 }
+@media screen and (min-width: 767.98px) {
+  .menu_container__items__card {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .menu_container__items__card__content {
   padding: 20px;
   width: 75%;

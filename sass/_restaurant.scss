@@ -109,6 +109,12 @@
             opacity: 0;
             transform: translateY(20px);
 
+            @media screen and (min-width: 767.98px) {
+                display: flex;
+                justify-content: space-between;
+                
+            }
+
             &__content {
                 padding: 20px;
                 width: 75%;
