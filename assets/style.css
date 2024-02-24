@@ -219,6 +219,9 @@ footer p, footer a {
   font-size: 16px;
   font-weight: 500;
 }
+.location i {
+  background-color: #EAEAEA;
+}
 
 .presentation section {
   padding-bottom: 20px;
