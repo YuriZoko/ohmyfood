@@ -109,12 +109,6 @@
             opacity: 0;
             transform: translateY(20px);
 
-            @media screen and (min-width: 767.98px) {
-                display: flex;
-                justify-content: space-between;
-                
-            }
-
             &__content {
                 padding: 20px;
                 width: 75%;
@@ -137,6 +131,9 @@
                 display: flex;
                 align-items: flex-end;
                 transition: width 0.5s;
+                @media screen and (min-width: 767.98px) {
+                    justify-content: flex-end;                    
+                }
             }
 
             &__validator {
