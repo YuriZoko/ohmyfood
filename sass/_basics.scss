@@ -69,6 +69,8 @@ header {
     flex-direction: column;
     margin-left: 20px;
     position: relative;
+    transform: translateY(-50px) translateX(420px);
+    width: 24px;
 
     &-checkbox {
         display: none;

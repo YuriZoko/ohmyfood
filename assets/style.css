@@ -59,6 +59,8 @@ header h1 {
   flex-direction: column;
   margin-left: 20px;
   position: relative;
+  transform: translateY(-50px) translateX(420px);
+  width: 24px;
 }
 .heart-checkbox {
   display: none;
@@ -232,7 +234,7 @@ footer p, footer a {
   text-align: center;
   background-color: #F3F3F3;
 }
-.presentation section h1 {
+.presentation section h2 {
   font-size: 24px;
   line-height: 28.13px;
   background-color: #F3F3F3;
@@ -267,7 +269,7 @@ footer p, footer a {
     justify-content: center;
   }
 }
-.fonctionnement h1 {
+.fonctionnement h2 {
   padding: 10px;
   font-size: 24px;
   line-height: 28.13px;
@@ -383,7 +385,7 @@ footer p, footer a {
     justify-content: center;
   }
 }
-.restaurants h1 {
+.restaurants h2 {
   background-color: #F3F3F3;
   padding: 10px;
   font-size: 24px;
@@ -474,8 +476,9 @@ footer p, footer a {
   font-weight: bold;
   color: #008766;
 }
-.restaurants__card h2 {
-  padding: 15px 0px 0px 10px;
+.restaurants__card h3 {
+  padding: 0px 0px 0px 10px;
+  margin-block-end: 0px;
   color: black;
   font-size: 18px;
 }
@@ -531,6 +534,9 @@ footer p, footer a {
 .menu_container__title span {
   background-color: #F3F3F3;
   transform: translateY(8px);
+}
+.menu_container__title .heart {
+  transform: translateY(0) translateX(0);
 }
 .menu_container__title .heart-label {
   background-color: #F3F3F3;
