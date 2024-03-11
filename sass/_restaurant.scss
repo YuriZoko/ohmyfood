@@ -45,7 +45,8 @@
         }
 
         .heart {
-            transform: translateY(0) translateX(0);;
+            top: 0;
+            width: 24px;
         }
         .heart-label {
             background-color: $grey;

@@ -59,8 +59,17 @@ header h1 {
   flex-direction: column;
   margin-left: 20px;
   position: relative;
-  transform: translateY(-50px) translateX(420px);
-  width: 24px;
+  background-color: transparent;
+  align-items: flex-end;
+  pointer-events: none;
+  top: -55px;
+  width: 90%;
+}
+@media screen and (min-width: 767.98px) {
+  .heart {
+    top: -50px;
+    width: 90%;
+  }
 }
 .heart-checkbox {
   display: none;
@@ -76,6 +85,7 @@ header h1 {
   width: 100%;
   height: 100%;
   transition: opacity 0.5s ease;
+  pointer-events: auto;
 }
 .heart i.fa-regular.fa-heart {
   color: black;
@@ -536,7 +546,8 @@ footer p, footer a {
   transform: translateY(8px);
 }
 .menu_container__title .heart {
-  transform: translateY(0) translateX(0);
+  top: 0;
+  width: 24px;
 }
 .menu_container__title .heart-label {
   background-color: #F3F3F3;
